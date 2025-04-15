@@ -4,9 +4,9 @@ public:
 
 	void selectStockBrocker(string name) {
 		if (name == "kiwer") stockBrocker = new KiwerDriver();
-		if (name == "nemo") stockBrocker =  new NemoDriver();
-		if (name == "mock") stockBrocker =  new MockDriver();
-		return nullptr;
+		else if (name == "nemo") stockBrocker =  new NemoDriver();
+		else if (name == "mock") stockBrocker =  new MockDriver();
+		else stockBrocker = nullptr;
 	}
 	
 	void buyNiceTiming(std::string stockCode, int price) {
